@@ -1,18 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor.SceneManagement;
 
 public class ChangeScene : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void NextScene(string SceneName)
     {
-        
+        EditorSceneManager.LoadScene(SceneName);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
