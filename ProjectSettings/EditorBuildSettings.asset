@@ -4,7 +4,22 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/StartScene.unity
+    guid: d3b19f8bccdec7747adfa551c4217454
+  - enabled: 1
+    path: Assets/Scenes/ARFilter.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/InspectCrowns.unity
+    guid: c9ffd3ff534f861438057d9c783dc122
+  - enabled: 1
+    path: Assets/Scenes/CrownInfo.unity
+    guid: 24b730fdee88e1449ae9c1541c48bced
+  - enabled: 1
+    path: Assets/Scenes/AppInfo.unity
+    guid: df53eb9fdab30924695cd82aed1557a3
   m_configObjects:
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: 744b813df90924c169af73489b8325de,
       type: 2}
