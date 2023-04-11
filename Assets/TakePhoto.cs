@@ -50,7 +50,7 @@ public class TakePhoto : MonoBehaviour
 
         // Read the RenderTexture data into a Texture2D
         RenderTexture.active = renderTexture;
-        Texture2D cameraTexture = new Texture2D(renderTexture.width, renderTexture.height, TextureFormat.RGB24, false);
+        Texture2D cameraTexture = new Texture2D(renderTexture.width, renderTexture.height, TextureFormat.RGBA32, false);
         cameraTexture.ReadPixels(new Rect(0, 0, renderTexture.width, renderTexture.height), 0, 0);
         cameraTexture.Apply();
         RenderTexture.active = null;
@@ -58,14 +58,14 @@ public class TakePhoto : MonoBehaviour
         // Instantiate the photo prefab and apply the camera texture as the photo texture
         GameObject photoObject = Instantiate(photoPrefab, Vector3.zero, Quaternion.identity);
         RawImage photoImage = photoObject.GetComponent<RawImage>();
-        photoTexture = new Texture2D(cameraTexture.width, cameraTexture.height, TextureFormat.RGB24, false);
+        photoTexture = new Texture2D(cameraTexture.width, cameraTexture.height, TextureFormat.RGBA32, false);
         photoTexture.SetPixels(cameraTexture.GetPixels());
         photoTexture.Apply();
         photoImage.texture = photoTexture;
 
         // Save the photo as a PNG image file
         byte[] bytes = photoTexture.EncodeToPNG();
-        string fileName = "Photo_" + System.DateTime.Now.ToString("yyyyMMdd_HHmmss") + ".png";
+        string fileName = "Vainags_" + System.DateTime.Now.ToString("yyyyMMdd_HHmmss") + ".png";
         File.WriteAllBytes(Application.persistentDataPath + "/" + fileName, bytes);
 
         // Destroy the photo object after 5 seconds
