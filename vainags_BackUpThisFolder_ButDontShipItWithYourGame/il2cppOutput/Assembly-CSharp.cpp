@@ -1166,12 +1166,10 @@ struct ChangeCrown_t517B9237EF78046B74C234CB687989B46535AB59  : public MonoBehav
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___FacePrefab_1_4;
 	// UnityEngine.GameObject ChangeCrown::FacePrefab_2
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___FacePrefab_2_5;
-	// UnityEngine.GameObject ChangeCrown::FacePrefab_3
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___FacePrefab_3_6;
 	// UnityEngine.XR.ARFoundation.ARFaceManager ChangeCrown::FaceManager
-	ARFaceManager_tE5955187C9D7C9C4C4139F522DA0DEA69EFCFD8F* ___FaceManager_7;
+	ARFaceManager_tE5955187C9D7C9C4C4139F522DA0DEA69EFCFD8F* ___FaceManager_6;
 	// DanielLochner.Assets.SimpleScrollSnap.SimpleScrollSnap ChangeCrown::SimpleScrollSnap
-	SimpleScrollSnap_t1EFCC6C02DF4349D365B4F33F30E648016A4133A* ___SimpleScrollSnap_8;
+	SimpleScrollSnap_t1EFCC6C02DF4349D365B4F33F30E648016A4133A* ___SimpleScrollSnap_7;
 };
 
 // ChangeScene
@@ -2585,7 +2583,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChangeCrown_ChangeFace_m2ECF507817434379
 	ARFace_t73C068C9C8422F79A858EC41C322D399305B8453* V_8 = NULL;
 	{
 		// int a = SimpleScrollSnap.SelectedPanel;
-		SimpleScrollSnap_t1EFCC6C02DF4349D365B4F33F30E648016A4133A* L_0 = __this->___SimpleScrollSnap_8;
+		SimpleScrollSnap_t1EFCC6C02DF4349D365B4F33F30E648016A4133A* L_0 = __this->___SimpleScrollSnap_7;
 		NullCheck(L_0);
 		int32_t L_1;
 		L_1 = SimpleScrollSnap_get_SelectedPanel_mBE1C21ACDC936A18B3F341610135EE385AC03087_inline(L_0, NULL);
@@ -2594,62 +2592,49 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChangeCrown_ChangeFace_m2ECF507817434379
 		// {
 		//     0 => FacePrefab_1,
 		//     1 => FacePrefab_2,
-		//     2 => FacePrefab_3,
 		//     _ => FacePrefab_1,
 		// };
 		int32_t L_2 = V_0;
-		switch (L_2)
+		if (!L_2)
 		{
-			case 0:
-			{
-				goto IL_0020;
-			}
-			case 1:
-			{
-				goto IL_0029;
-			}
-			case 2:
-			{
-				goto IL_0032;
-			}
+			goto IL_0015;
 		}
 	}
 	{
-		goto IL_003b;
+		int32_t L_3 = V_0;
+		if ((((int32_t)L_3) == ((int32_t)1)))
+		{
+			goto IL_001e;
+		}
+	}
+	{
+		goto IL_0027;
 	}
 
-IL_0020:
+IL_0015:
 	{
 		// 0 => FacePrefab_1,
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_3 = __this->___FacePrefab_1_4;
-		V_3 = L_3;
-		goto IL_0042;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_4 = __this->___FacePrefab_1_4;
+		V_3 = L_4;
+		goto IL_002e;
 	}
 
-IL_0029:
+IL_001e:
 	{
 		// 1 => FacePrefab_2,
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_4 = __this->___FacePrefab_2_5;
-		V_3 = L_4;
-		goto IL_0042;
-	}
-
-IL_0032:
-	{
-		// 2 => FacePrefab_3,
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_5 = __this->___FacePrefab_3_6;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_5 = __this->___FacePrefab_2_5;
 		V_3 = L_5;
-		goto IL_0042;
+		goto IL_002e;
 	}
 
-IL_003b:
+IL_0027:
 	{
 		// _ => FacePrefab_1,
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_6 = __this->___FacePrefab_1_4;
 		V_3 = L_6;
 	}
 
-IL_0042:
+IL_002e:
 	{
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_7 = V_3;
 		V_1 = L_7;
@@ -2659,7 +2644,7 @@ IL_0042:
 		List_1__ctor_m9CDEF85B1B6A59BCC04483D11F54F65A1961DDE2(L_8, List_1__ctor_m9CDEF85B1B6A59BCC04483D11F54F65A1961DDE2_RuntimeMethod_var);
 		V_2 = L_8;
 		// foreach (ARFace face in FaceManager.trackables)
-		ARFaceManager_tE5955187C9D7C9C4C4139F522DA0DEA69EFCFD8F* L_9 = __this->___FaceManager_7;
+		ARFaceManager_tE5955187C9D7C9C4C4139F522DA0DEA69EFCFD8F* L_9 = __this->___FaceManager_6;
 		NullCheck(L_9);
 		TrackableCollection_1_t7F8F18DAEBAC38B9CA739A30AD2C21CCE8F8B305 L_10;
 		L_10 = ARTrackableManager_5_get_trackables_m32440CFD7C68D75BB3FB2ED84A6DEE060390FBD7(L_9, ARTrackableManager_5_get_trackables_m32440CFD7C68D75BB3FB2ED84A6DEE060390FBD7_RuntimeMethod_var);
@@ -2667,10 +2652,10 @@ IL_0042:
 		Enumerator_t2743D5A35F15690DAB1B61F0480A44C6AFE6C2DC L_11;
 		L_11 = TrackableCollection_1_GetEnumerator_m3CD3F46003D1DE39B7C8FFD1490E59DD23BEBA3F((&V_5), TrackableCollection_1_GetEnumerator_m3CD3F46003D1DE39B7C8FFD1490E59DD23BEBA3F_RuntimeMethod_var);
 		V_4 = L_11;
-		goto IL_0073;
+		goto IL_005f;
 	}
 
-IL_0062:
+IL_004e:
 	{
 		// foreach (ARFace face in FaceManager.trackables)
 		ARFace_t73C068C9C8422F79A858EC41C322D399305B8453* L_12;
@@ -2683,14 +2668,14 @@ IL_0062:
 		List_1_Add_m24C11595CE56A4BAF3C34816BFA91A80F8D3AD47_inline(L_13, L_14, List_1_Add_m24C11595CE56A4BAF3C34816BFA91A80F8D3AD47_RuntimeMethod_var);
 	}
 
-IL_0073:
+IL_005f:
 	{
 		// foreach (ARFace face in FaceManager.trackables)
 		bool L_15;
 		L_15 = Enumerator_MoveNext_mBE785620F02FA4C9BFF31CC4A56D796BCA196F04((&V_4), Enumerator_MoveNext_mBE785620F02FA4C9BFF31CC4A56D796BCA196F04_RuntimeMethod_var);
 		if (L_15)
 		{
-			goto IL_0062;
+			goto IL_004e;
 		}
 	}
 	{
@@ -2705,7 +2690,7 @@ IL_0073:
 		auto __finallyBlock = il2cpp::utils::Finally([&]
 		{
 
-FINALLY_00fc:
+FINALLY_00e8:
 			{// begin finally (depth: 1)
 				Enumerator_Dispose_m15E5AEB7B51E458573862F23127AC2A9B3CDD019((&V_7), Enumerator_Dispose_m15E5AEB7B51E458573862F23127AC2A9B3CDD019_RuntimeMethod_var);
 				return;
@@ -2714,10 +2699,10 @@ FINALLY_00fc:
 		try
 		{// begin try (depth: 1)
 			{
-				goto IL_00f1_1;
+				goto IL_00dd_1;
 			}
 
-IL_0086_1:
+IL_0072_1:
 			{
 				// foreach (ARFace face in faces)
 				ARFace_t73C068C9C8422F79A858EC41C322D399305B8453* L_18;
@@ -2733,7 +2718,7 @@ IL_0086_1:
 				L_21 = Transform_get_childCount_mE9C29C702AB662CC540CA053EDE48BDAFA35B4B0(L_20, NULL);
 				if ((((int32_t)L_21) <= ((int32_t)0)))
 				{
-					goto IL_00b5_1;
+					goto IL_00a1_1;
 				}
 			}
 			{
@@ -2752,7 +2737,7 @@ IL_0086_1:
 				Object_Destroy_mE97D0A766419A81296E8D4E5C23D01D3FE91ACBB(L_25, NULL);
 			}
 
-IL_00b5_1:
+IL_00a1_1:
 			{
 				// GameObject newModel = Instantiate(NewFacePrefab, face.transform);
 				GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_26 = V_1;
@@ -2791,18 +2776,18 @@ IL_00b5_1:
 				Transform_set_localScale_mBA79E811BAF6C47B80FF76414C12B47B3CD03633(L_36, L_37, NULL);
 			}
 
-IL_00f1_1:
+IL_00dd_1:
 			{
 				// foreach (ARFace face in faces)
 				bool L_38;
 				L_38 = Enumerator_MoveNext_mA897B279DB5B668F9DEE3556F7767CC0557DBC49((&V_7), Enumerator_MoveNext_mA897B279DB5B668F9DEE3556F7767CC0557DBC49_RuntimeMethod_var);
 				if (L_38)
 				{
-					goto IL_0086_1;
+					goto IL_0072_1;
 				}
 			}
 			{
-				goto IL_010a;
+				goto IL_00f6;
 			}
 		}// end try (depth: 1)
 		catch(Il2CppExceptionWrapper& e)
@@ -2811,10 +2796,10 @@ IL_00f1_1:
 		}
 	}
 
-IL_010a:
+IL_00f6:
 	{
 		// FaceManager.facePrefab = NewFacePrefab;
-		ARFaceManager_tE5955187C9D7C9C4C4139F522DA0DEA69EFCFD8F* L_39 = __this->___FaceManager_7;
+		ARFaceManager_tE5955187C9D7C9C4C4139F522DA0DEA69EFCFD8F* L_39 = __this->___FaceManager_6;
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_40 = V_1;
 		NullCheck(L_39);
 		ARFaceManager_set_facePrefab_m817BF61BC85C89439E7740C986274D3967351427_inline(L_39, L_40, NULL);

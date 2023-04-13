@@ -11,8 +11,6 @@ public class ChangeCrown : MonoBehaviour
     [SerializeField]
     private GameObject FacePrefab_2;
     [SerializeField]
-    private GameObject FacePrefab_3;
-    [SerializeField]
     private ARFaceManager FaceManager;
     [SerializeField]
      private SimpleScrollSnap SimpleScrollSnap;
@@ -25,7 +23,6 @@ public class ChangeCrown : MonoBehaviour
         {
             0 => FacePrefab_1,
             1 => FacePrefab_2,
-            2 => FacePrefab_3,
             _ => FacePrefab_1,
         };
 

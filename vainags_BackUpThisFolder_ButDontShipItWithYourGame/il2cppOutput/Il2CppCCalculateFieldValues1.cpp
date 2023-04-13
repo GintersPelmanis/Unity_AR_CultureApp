@@ -15743,12 +15743,10 @@ struct ChangeCrown_t517B9237EF78046B74C234CB687989B46535AB59  : public MonoBehav
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___FacePrefab_1_4;
 	// UnityEngine.GameObject ChangeCrown::FacePrefab_2
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___FacePrefab_2_5;
-	// UnityEngine.GameObject ChangeCrown::FacePrefab_3
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___FacePrefab_3_6;
 	// UnityEngine.XR.ARFoundation.ARFaceManager ChangeCrown::FaceManager
-	ARFaceManager_tE5955187C9D7C9C4C4139F522DA0DEA69EFCFD8F* ___FaceManager_7;
+	ARFaceManager_tE5955187C9D7C9C4C4139F522DA0DEA69EFCFD8F* ___FaceManager_6;
 	// DanielLochner.Assets.SimpleScrollSnap.SimpleScrollSnap ChangeCrown::SimpleScrollSnap
-	SimpleScrollSnap_t1EFCC6C02DF4349D365B4F33F30E648016A4133A* ___SimpleScrollSnap_8;
+	SimpleScrollSnap_t1EFCC6C02DF4349D365B4F33F30E648016A4133A* ___SimpleScrollSnap_7;
 };
 
 // DanielLochner.Assets.SimpleScrollSnap.DynamicContent
@@ -26556,9 +26554,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4770[4] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4774[1] = 
 {
 	static_cast<int32_t>(offsetof(BackButton_tDD46B24681B87D968EA33D516F8A7568B81CC833, ___sceneName_4)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4775[5] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4775[4] = 
 {
-	static_cast<int32_t>(offsetof(ChangeCrown_t517B9237EF78046B74C234CB687989B46535AB59, ___FacePrefab_1_4)),static_cast<int32_t>(offsetof(ChangeCrown_t517B9237EF78046B74C234CB687989B46535AB59, ___FacePrefab_2_5)),static_cast<int32_t>(offsetof(ChangeCrown_t517B9237EF78046B74C234CB687989B46535AB59, ___FacePrefab_3_6)),static_cast<int32_t>(offsetof(ChangeCrown_t517B9237EF78046B74C234CB687989B46535AB59, ___FaceManager_7)),static_cast<int32_t>(offsetof(ChangeCrown_t517B9237EF78046B74C234CB687989B46535AB59, ___SimpleScrollSnap_8)),};
+	static_cast<int32_t>(offsetof(ChangeCrown_t517B9237EF78046B74C234CB687989B46535AB59, ___FacePrefab_1_4)),static_cast<int32_t>(offsetof(ChangeCrown_t517B9237EF78046B74C234CB687989B46535AB59, ___FacePrefab_2_5)),static_cast<int32_t>(offsetof(ChangeCrown_t517B9237EF78046B74C234CB687989B46535AB59, ___FaceManager_6)),static_cast<int32_t>(offsetof(ChangeCrown_t517B9237EF78046B74C234CB687989B46535AB59, ___SimpleScrollSnap_7)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4777[3] = 
 {
 	static_cast<int32_t>(offsetof(U3CCapturePhotoU3Ed__7_tC4A2935B079A579F4F72A4456D3654B711380E2F, ___U3CU3E1__state_0)),static_cast<int32_t>(offsetof(U3CCapturePhotoU3Ed__7_tC4A2935B079A579F4F72A4456D3654B711380E2F, ___U3CU3E2__current_1)),static_cast<int32_t>(offsetof(U3CCapturePhotoU3Ed__7_tC4A2935B079A579F4F72A4456D3654B711380E2F, ___U3CU3E4__this_2)),};
