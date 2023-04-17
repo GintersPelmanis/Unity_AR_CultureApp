@@ -14,7 +14,7 @@ public class BackButton : MonoBehaviour
         SceneStack.Push(currentScene);
     }
 
-    private void PrevScene()
+    public void PrevScene()
     {
         SceneStack.Pop();
         if (SceneStack.Count > 0)
@@ -22,6 +22,8 @@ public class BackButton : MonoBehaviour
         else
             Application.Quit();
     }
+
+
     void Update()
     {
         if (Application.platform == RuntimePlatform.Android && Input.GetKey(KeyCode.Escape))

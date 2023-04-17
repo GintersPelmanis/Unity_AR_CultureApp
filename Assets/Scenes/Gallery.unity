@@ -3174,18 +3174,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1975761385}
   m_CullTransparentMesh: 1
---- !u!114 &6050987797167135168
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6050987797167135170}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e047f5bc0acb09e4e8e370a2b6849cd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &6050987797167135169
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3218,7 +3206,6 @@ GameObject:
   - component: {fileID: 6050987797167135173}
   - component: {fileID: 6050987797167135174}
   - component: {fileID: 6050987797167135175}
-  - component: {fileID: 6050987797167135168}
   m_Layer: 5
   m_Name: BackButton
   m_TagString: Untagged
@@ -3308,10 +3295,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6050987797167135168}
-        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
-        m_MethodName: NextScene
-        m_Mode: 5
+      - m_Target: {fileID: 398724800}
+        m_TargetAssemblyTypeName: BackButton, Assembly-CSharp
+        m_MethodName: PrevScene
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
