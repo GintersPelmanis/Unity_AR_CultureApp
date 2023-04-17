@@ -4,6 +4,10 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
 
+public class ItemSerializer{
+    public Item Item;
+}
+
 public class ItemListUI : MonoBehaviour
 {
     [SerializeField]
@@ -24,7 +28,15 @@ public class ItemListUI : MonoBehaviour
 
     private void OnItemClick(Item item)
     {
+        ItemSerializer serializer = new ItemSerializer()
+        {
+            Item = item
+        };
+
+        var sceneParamsJson = JsonUtility.ToJson(serializer);
         SceneManager.LoadScene("CrownInfo");
+        PlayerPrefs.SetString("ItemDetailsSceneParams", sceneParamsJson);
+
     }
 }
 

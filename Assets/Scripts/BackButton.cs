@@ -17,8 +17,8 @@ public class BackButton : MonoBehaviour
     public void PrevScene()
     {
         SceneStack.Pop();
-        if (SceneStack.Count > 0)
-            SceneManager.LoadScene(SceneStack.Peek());
+        if (SceneStack.Count > 1)
+            SceneManager.LoadScene(SceneStack.Pop());
         else
             Application.Quit();
     }

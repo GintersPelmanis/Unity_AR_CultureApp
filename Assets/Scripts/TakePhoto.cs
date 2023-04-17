@@ -11,9 +11,11 @@ public class TakePhoto : MonoBehaviour
     [SerializeField]
     private Button takePhotoButton;
     [SerializeField]
-    private GameObject photoPrefab;
+    private GameObject photoPreview;
     [SerializeField]
     private AudioClip snapSound;
+    [SerializeField]
+    private GameObject UI_element;
 
     private ARCameraManager cameraManager;
     private Texture2D photoTexture;
@@ -28,42 +30,28 @@ public class TakePhoto : MonoBehaviour
 
     private void TakePhotoOnClick()
     {
-  
-        cameraManager.enabled = false;
         StartCoroutine(CapturePhoto());
-        cameraManager.enabled = true;
     }
 
     private IEnumerator CapturePhoto()
     {
+        // Disable the UI element while the photo is being taken
+        UI_element.SetActive(false);
+
+        yield return new WaitForEndOfFrame();
+   
         // Play the snap sound effect
         AudioSource.PlayClipAtPoint(snapSound, Camera.main.transform.position);
 
-        yield return null;
-
-        // Create a RenderTexture to capture the camera view with the added augmentation
-        RenderTexture renderTexture = new RenderTexture(Screen.width, Screen.height, 24);
-        Camera camera = Camera.main;
-        camera.targetTexture = renderTexture;
-        camera.Render();
-
-        // Read the RenderTexture data into a Texture2D
-        RenderTexture.active = renderTexture;
-        Texture2D cameraTexture = new Texture2D(renderTexture.width, renderTexture.height, TextureFormat.RGBA32, false);
-        cameraTexture.ReadPixels(new Rect(0, 0, renderTexture.width, renderTexture.height), 0, 0);
-        cameraTexture.Apply();
-        RenderTexture.active = null;
-
-        RawImage photoImage = photoPrefab.GetComponent<RawImage>();
-        photoTexture = new Texture2D(cameraTexture.width, cameraTexture.height, TextureFormat.RGBA32, false);
-        photoTexture.SetPixels(cameraTexture.GetPixels());
-        photoTexture.Apply();
+        photoTexture = ScreenCapture.CaptureScreenshotAsTexture();
+        var photoImage = photoPreview.GetComponentInChildren<RawImage>();
         photoImage.texture = photoTexture;
 
-        // Save the photo as a PNG image file
-        byte[] bytes = photoTexture.EncodeToPNG();
-        string fileName = "Vainags_" + System.DateTime.Now.ToString("yyyyMMdd_HHmmss") + ".png";
-        File.WriteAllBytes(Application.persistentDataPath + "/" + fileName, bytes);
+        // Save the photo to device
+        string fileName = "Vainags_" + System.DateTime.Now.ToString("yyyyMMdd_HHmmss")+".png";
+        ScreenCapture.CaptureScreenshot(fileName);
 
+        // Enable the UI element after the photo is taken
+        UI_element.SetActive(true);
     }
 }
