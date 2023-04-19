@@ -44,8 +44,9 @@ public class TakePhoto : MonoBehaviour
         AudioSource.PlayClipAtPoint(snapSound, Camera.main.transform.position);
 
         photoTexture = ScreenCapture.CaptureScreenshotAsTexture();
-        var photoImage = photoPreview.GetComponentInChildren<RawImage>();
-        photoImage.texture = photoTexture;
+        var photoImage = photoPreview.GetComponent<Image>();
+        photoImage.sprite = Sprite.Create(photoTexture, new Rect(0, 0, photoTexture.width*2, photoTexture.height*2), new Vector2(0.5f, 0.5f));
+        photoImage.preserveAspect = true;
 
         // Save the photo to device
         string fileName = "Vainags_" + System.DateTime.Now.ToString("yyyyMMdd_HHmmss")+".png";
