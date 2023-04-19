@@ -28,7 +28,7 @@ public class ItemListUI : MonoBehaviour
 
     private void OnItemClick(Item item)
     {
-        ItemSerializer serializer = new ItemSerializer()
+        ItemSerializer serializer = new()
         {
             Item = item
         };

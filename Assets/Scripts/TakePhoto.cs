@@ -45,7 +45,7 @@ public class TakePhoto : MonoBehaviour
 
         photoTexture = ScreenCapture.CaptureScreenshotAsTexture();
         var photoImage = photoPreview.GetComponent<Image>();
-        photoImage.sprite = Sprite.Create(photoTexture, new Rect(0, 0, photoTexture.width*2, photoTexture.height*2), new Vector2(0.5f, 0.5f));
+        photoImage.sprite = Sprite.Create(photoTexture, new Rect(0, 0, photoTexture.width, photoTexture.height), new Vector2(0.5f, 0.5f));
         photoImage.preserveAspect = true;
 
         // Save the photo to device

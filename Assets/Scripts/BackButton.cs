@@ -10,6 +10,7 @@ public class BackButton : MonoBehaviour
 
     private void Start()
     {
+        Debug.Log(SceneStack.Count);
         currentScene = SceneManager.GetActiveScene().name;
         SceneStack.Push(currentScene);
     }
