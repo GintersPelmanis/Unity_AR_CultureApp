@@ -5521,7 +5521,7 @@ IL_003e:
 		NullCheck(L_15);
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_16;
 		L_16 = GameObject_GetComponent_TisImage_tBC1D03F63BF71132E9A5E472B8742F172A011E7E_mA59EA7D5F9133B2593F4AB70B099928BA955EE7D(L_15, GameObject_GetComponent_TisImage_tBC1D03F63BF71132E9A5E472B8742F172A011E7E_mA59EA7D5F9133B2593F4AB70B099928BA955EE7D_RuntimeMethod_var);
-		// photoImage.sprite = Sprite.Create(photoTexture, new Rect(0, 0, photoTexture.width*2, photoTexture.height*2), new Vector2(0.5f, 0.5f));
+		// photoImage.sprite = Sprite.Create(photoTexture, new Rect(0, 0, photoTexture.width, photoTexture.height), new Vector2(0.5f, 0.5f));
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_17 = L_16;
 		TakePhoto_t8F8FD5E90160DEBF5FA47204B5633ECF31E602D1* L_18 = V_1;
 		NullCheck(L_18);
@@ -5540,7 +5540,7 @@ IL_003e:
 		L_25 = VirtualFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_24);
 		Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D L_26;
 		memset((&L_26), 0, sizeof(L_26));
-		Rect__ctor_m18C3033D135097BEE424AAA68D91C706D2647F23((&L_26), (0.0f), (0.0f), ((float)((int32_t)il2cpp_codegen_multiply(L_22, 2))), ((float)((int32_t)il2cpp_codegen_multiply(L_25, 2))), /*hidden argument*/NULL);
+		Rect__ctor_m18C3033D135097BEE424AAA68D91C706D2647F23((&L_26), (0.0f), (0.0f), ((float)L_22), ((float)L_25), /*hidden argument*/NULL);
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_27;
 		memset((&L_27), 0, sizeof(L_27));
 		Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline((&L_27), (0.5f), (0.5f), /*hidden argument*/NULL);
