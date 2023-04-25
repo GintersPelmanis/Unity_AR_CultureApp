@@ -4616,25 +4616,25 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BackButton_PrevScene_m69F44FCDAE672C161A
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		// SceneStack.Pop();
+		// if (SceneStack.Count > 1)
 		il2cpp_codegen_runtime_class_init_inline(BackButton_tDD46B24681B87D968EA33D516F8A7568B81CC833_il2cpp_TypeInfo_var);
 		Stack_1_tD770B7BA3385BBF3A1703E386B6006FF670C5094* L_0 = ((BackButton_tDD46B24681B87D968EA33D516F8A7568B81CC833_StaticFields*)il2cpp_codegen_static_fields_for(BackButton_tDD46B24681B87D968EA33D516F8A7568B81CC833_il2cpp_TypeInfo_var))->___SceneStack_4;
 		NullCheck(L_0);
-		String_t* L_1;
-		L_1 = Stack_1_Pop_mFE7E2A46CC49662C0B06E3F80D39FA8986EE690D(L_0, Stack_1_Pop_mFE7E2A46CC49662C0B06E3F80D39FA8986EE690D_RuntimeMethod_var);
-		// if (SceneStack.Count > 1)
-		Stack_1_tD770B7BA3385BBF3A1703E386B6006FF670C5094* L_2 = ((BackButton_tDD46B24681B87D968EA33D516F8A7568B81CC833_StaticFields*)il2cpp_codegen_static_fields_for(BackButton_tDD46B24681B87D968EA33D516F8A7568B81CC833_il2cpp_TypeInfo_var))->___SceneStack_4;
-		NullCheck(L_2);
-		int32_t L_3;
-		L_3 = Stack_1_get_Count_mBBF18F06E59C15BC37DAA27F769861927CDDE29F_inline(L_2, Stack_1_get_Count_mBBF18F06E59C15BC37DAA27F769861927CDDE29F_RuntimeMethod_var);
-		if ((((int32_t)L_3) <= ((int32_t)1)))
+		int32_t L_1;
+		L_1 = Stack_1_get_Count_mBBF18F06E59C15BC37DAA27F769861927CDDE29F_inline(L_0, Stack_1_get_Count_mBBF18F06E59C15BC37DAA27F769861927CDDE29F_RuntimeMethod_var);
+		if ((((int32_t)L_1) <= ((int32_t)1)))
 		{
 			goto IL_0028;
 		}
 	}
 	{
-		// SceneManager.LoadScene(SceneStack.Pop());
+		// SceneStack.Pop();
 		il2cpp_codegen_runtime_class_init_inline(BackButton_tDD46B24681B87D968EA33D516F8A7568B81CC833_il2cpp_TypeInfo_var);
+		Stack_1_tD770B7BA3385BBF3A1703E386B6006FF670C5094* L_2 = ((BackButton_tDD46B24681B87D968EA33D516F8A7568B81CC833_StaticFields*)il2cpp_codegen_static_fields_for(BackButton_tDD46B24681B87D968EA33D516F8A7568B81CC833_il2cpp_TypeInfo_var))->___SceneStack_4;
+		NullCheck(L_2);
+		String_t* L_3;
+		L_3 = Stack_1_Pop_mFE7E2A46CC49662C0B06E3F80D39FA8986EE690D(L_2, Stack_1_Pop_mFE7E2A46CC49662C0B06E3F80D39FA8986EE690D_RuntimeMethod_var);
+		// SceneManager.LoadScene(SceneStack.Pop());
 		Stack_1_tD770B7BA3385BBF3A1703E386B6006FF670C5094* L_4 = ((BackButton_tDD46B24681B87D968EA33D516F8A7568B81CC833_StaticFields*)il2cpp_codegen_static_fields_for(BackButton_tDD46B24681B87D968EA33D516F8A7568B81CC833_il2cpp_TypeInfo_var))->___SceneStack_4;
 		NullCheck(L_4);
 		String_t* L_5;

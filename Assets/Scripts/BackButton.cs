@@ -17,11 +17,15 @@ public class BackButton : MonoBehaviour
 
     public void PrevScene()
     {
-        SceneStack.Pop();
         if (SceneStack.Count > 1)
+        {
+            SceneStack.Pop();
             SceneManager.LoadScene(SceneStack.Pop());
+        }
         else
+        {
             Application.Quit();
+        }
     }
 
 
