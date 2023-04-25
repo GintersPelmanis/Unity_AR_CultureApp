@@ -12,7 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c74506fbc0c2ca94f929516e50f97f11, type: 3}
   m_Name: Crown 2
   m_EditorClassIdentifier: 
-  Name: Vainags 2
-  Description: Veinaga Apraksts
+  Name: Sakas vainags
+  Description: "Saka ir ciems Dienvidkurzemes novad\u0101, net\u0101lu no P\u0101vilostas.
+    Apdz\u012Bvot\u0101 vieta izveidojusies pie biju\u0161\u0101s Sakas pils, rakst\u012Btajos
+    avotos \u0161\u012B vieta min\u0113ta jau 1230. gad\u0101. Sakas tautast\u0113rpa
+    brun\u010Di izce\u013Cas ar t\u0101 rakstu - tie austi dre\u013C\u013Cu rakst\u0101,
+    to apak\u0161mal\u0101 ir sarkana vilnas lente un melna p\u012Bta aukli\u0146a.
+    Pie brun\u010Diem velk Kurzemes di\u017Ekreklu ar tum\u0161i zilo iz\u0161uvumu,
+    kuram virs\u016B velk zilu \u0146ieburu. T\u0113rpu papildina ar\u012B p\u0101r
+    pleciem velkama villaine un meit\u0101m, protams, kr\u0101\u0161\u0146i izrakst\u012Bts
+    vainags. Uz sarkana auduma ar p\u0113rl\u012Bt\u0113m un salmi\u0146iem iz\u0161\u016Bti
+    lieli un mazi ziedi, krusti\u0146i un saul\u012Btes veido unik\u0101lo Sakas
+    vainaga rakstu. Vainaga aug\u0161mala iz\u0161\u016Bta ar da\u017E\u0101da izm\u0113ra
+    stikla un citu materi\u0101lu p\u0113rl\u0113m. "
   Images:
   - {fileID: 21300000, guid: 192f707694e630f48becbffd6383cc49, type: 3}

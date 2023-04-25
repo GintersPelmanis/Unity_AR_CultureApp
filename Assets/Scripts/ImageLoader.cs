@@ -23,9 +23,11 @@ public class ImageLoader : MonoBehaviour
             byte[] bytes = File.ReadAllBytes(file);
             texture.LoadImage(bytes);
 
+            string fileName = Path.GetFileName(file);
+
             // Create a new image object from the prefab
             GameObject imageObject = Instantiate(imagePrefab, content);
-
+            imageObject.name = fileName;
             // Set the sprite of the image object to the loaded texture
             imageObject.transform.GetChild(0).GetComponent<Image>().sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
         }

@@ -16,6 +16,8 @@ public class TakePhoto : MonoBehaviour
     private AudioClip snapSound;
     [SerializeField]
     private GameObject UI_element;
+    [SerializeField]
+    private ChangeCrown changeCrown;
 
     private ARCameraManager cameraManager;
     private Texture2D photoTexture;
@@ -49,7 +51,7 @@ public class TakePhoto : MonoBehaviour
         photoImage.preserveAspect = true;
 
         // Save the photo to device
-        string fileName = "Vainags_" + System.DateTime.Now.ToString("yyyyMMdd_HHmmss")+".png";
+        string fileName = "Vainags"+ changeCrown.CrownId + "_" + System.DateTime.Now.ToString("yyyyMMdd_HHmmss")+".png";
         ScreenCapture.CaptureScreenshot(fileName);
 
         // Enable the UI element after the photo is taken

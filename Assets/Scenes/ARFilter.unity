@@ -268,6 +268,7 @@ MonoBehaviour:
   photoPreview: {fileID: 223974226}
   snapSound: {fileID: 8300000, guid: dd7315972782de945bf93b9df163994e, type: 3}
   UI_element: {fileID: 1947531001}
+  changeCrown: {fileID: 1376356480}
 --- !u!81 &22732926
 AudioListener:
   m_ObjectHideFlags: 0
@@ -508,7 +509,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -16.377, y: -1.085}
+  m_AnchoredPosition: {x: -0.000047684, y: -17}
   m_SizeDelta: {x: 773.168, y: 293.354}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &360842072
@@ -531,9 +532,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Lai sp\u0113tu izmantot \u0161o applik\u0101ciju. l\u016Bdzu at\u013Caujiet
-    applikacijai izmantot kameru\n\nNospie\u017Eot pogu, tiks atk\u0101rtoti papras\u012Bta
-    at\u013Cauja izmantot kameru"
+  m_text: "Lai var\u0113tu piem\u0113r\u012Bt vainagus, nepiecie\u0161ams izmantot
+    viedier\u012Bces kameru."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -560,7 +560,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 44.4
+  m_fontSize: 60.3
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -596,7 +596,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 0, w: 81.857895}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1268,7 +1268,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "L\u016ADZU ATLAIJIET KAMERAS TIESIBAS"
+  m_text: "L\u016ADZU, AT\u013BAUJ IZMANTOT KAMERU!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1403,7 +1403,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Vainags 2
+  m_text: Sakas Vainags
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1756,6 +1756,7 @@ MonoBehaviour:
     type: 3}
   FaceManager: {fileID: 388525032}
   SimpleScrollSnap: {fileID: 5681489237964289240}
+  CrownId: 0
 --- !u!114 &1376356481
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1939,7 +1940,7 @@ PrefabInstance:
     - target: {fileID: 5038673827322131233, guid: b5a8958a8631d3348a06d86329828cc5,
         type: 3}
       propertyPath: m_text
-      value: OK
+      value: LABI
       objectReference: {fileID: 0}
     - target: {fileID: 5038673827322131233, guid: b5a8958a8631d3348a06d86329828cc5,
         type: 3}

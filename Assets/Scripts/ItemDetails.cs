@@ -14,7 +14,6 @@ public class ItemDetails : MonoBehaviour
     private void Start()
     {
         // Retrieve selected item data from PlayerPrefs
-        Debug.Log(PlayerPrefs.GetString("ItemDetailsSceneParams"));
         var sceneParamsJson = PlayerPrefs.GetString("ItemDetailsSceneParams");
         Item item = JsonUtility.FromJson<ItemSerializer>(sceneParamsJson).Item;
 

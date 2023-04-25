@@ -15,11 +15,13 @@ public class ChangeCrown : MonoBehaviour
     [SerializeField]
      private SimpleScrollSnap SimpleScrollSnap;
 
+    public int CrownId = 0;
+
     public void ChangeFace()
     {
 
-        int a = SimpleScrollSnap.SelectedPanel;
-        GameObject NewFacePrefab = a switch
+        CrownId = SimpleScrollSnap.SelectedPanel;
+        GameObject NewFacePrefab = CrownId switch
         {
             0 => FacePrefab_1,
             1 => FacePrefab_2,
