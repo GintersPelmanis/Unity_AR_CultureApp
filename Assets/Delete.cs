@@ -11,6 +11,8 @@ public class Delete : MonoBehaviour
 
     [SerializeField]
     GameObject popup;
+    [SerializeField]
+    GameObject warning;
 
     private void Start()
     {
@@ -29,6 +31,11 @@ public class Delete : MonoBehaviour
         {
             Debug.Log("File not found" + path);
         }
+    }
+    
+    public void Warning()
+    {
+        warning.SetActive(true);
     }
 }
 

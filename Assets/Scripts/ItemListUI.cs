@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 using TMPro;
 
 public class ItemSerializer{
-    public Item Item;
+    public int number;
 }
 
 public class ItemListUI : MonoBehaviour
@@ -20,17 +20,20 @@ public class ItemListUI : MonoBehaviour
         foreach (var item in itemList.Items)
         {
             var itemObject = Instantiate(itemPrefab, itemParent);
+            
+            GameObject image = itemObject.transform.Find("Image").gameObject;
+
             itemObject.GetComponentInChildren<TextMeshProUGUI>().text = item.Name;
-            itemObject.GetComponentInChildren<Image>().sprite = item.Images[0];
-            itemObject.GetComponent<Button>().onClick.AddListener(() => OnItemClick(item));
+            image.GetComponent<Image>().sprite = item.Image;
+            itemObject.GetComponent<Button>().onClick.AddListener(() => OnItemClick(itemList.Items.IndexOf(item)));
         }
     }
 
-    private void OnItemClick(Item item)
+    private void OnItemClick(int a)
     {
         ItemSerializer serializer = new()
         {
-            Item = item
+            number = a
         };
 
         var sceneParamsJson = JsonUtility.ToJson(serializer);

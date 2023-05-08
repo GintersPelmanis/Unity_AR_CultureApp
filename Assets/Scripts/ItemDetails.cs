@@ -8,24 +8,34 @@ public class ItemDetails : MonoBehaviour
 {
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI descriptionText;
-    public GameObject imageParent;
-    public GameObject imagePrefab;
+    public Image image;
+    static int currentCrown = 1;
+    public ItemList itemlist;
+    public const int totalCrowns = 2;
+    private List<Item> items;
+    private Item currentItem;
 
     private void Start()
     {
-        // Retrieve selected item data from PlayerPrefs
         var sceneParamsJson = PlayerPrefs.GetString("ItemDetailsSceneParams");
-        Item item = JsonUtility.FromJson<ItemSerializer>(sceneParamsJson).Item;
-
-        // Populate UI with item data
-        nameText.text = item.Name;
-        descriptionText.text = item.Description;
-
-        //Populate ScrollView with imageprefabs and change sprite in them
-        foreach (Sprite image in item.Images)
-        {
-            var imageObject = Instantiate(imagePrefab, imageParent.transform);
-            imageObject.GetComponentInChildren<Image>().sprite = image;
-        }
+        currentCrown = JsonUtility.FromJson<ItemSerializer>(sceneParamsJson).number + 1;
+        items = itemlist.Items;
+        currentItem = items[currentCrown - 1];
+        UpdateData();
     }
+
+    public void ChangeCrown(int i)
+    {
+        currentCrown = (currentCrown + i - 1 + totalCrowns) % totalCrowns + 1;
+        currentItem = items[currentCrown - 1];
+        UpdateData();
+    }
+
+    private void UpdateData()
+    {
+        nameText.text = currentItem.Name;
+        descriptionText.text = currentItem.Description;
+        image.sprite = currentItem.Image;
+    }
+
 }

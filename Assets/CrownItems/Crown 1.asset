@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c74506fbc0c2ca94f929516e50f97f11, type: 3}
   m_Name: Crown 1
   m_EditorClassIdentifier: 
-  Name: Nicas Veinags
+  Name: "N\u012Bcas/B\u0101rtas vainags"
   Description: "Pateicoties akt\u012Bvajiem sakariem pa j\u016Bru, Kurzemes t\u0113rpos
     19.gs. beig\u0101s ien\u0101ca Latvijai netradicion\u0101li materi\u0101li. T\u0113rpu
     apdarei bag\u0101t\u012Bgi izmantotas ievestas lentas, vizu\u013Ci, p\u0113rles,
@@ -36,8 +36,4 @@ MonoBehaviour:
     vainagos. Z\u012B\u013Cu vainagu tradicion\u0101li velk tikai prec\u012Bb\u0101m
     gatava jauniete l\u012Bdz k\u0101z\u0101m, p\u0113c tam tiek vilkta dr\u0101nele
     (lakats) vai cepure (vainagcepure vai aube). "
-  Images:
-  - {fileID: 21300000, guid: 192f707694e630f48becbffd6383cc49, type: 3}
-  - {fileID: 21300000, guid: 192f707694e630f48becbffd6383cc49, type: 3}
-  - {fileID: 21300000, guid: 192f707694e630f48becbffd6383cc49, type: 3}
-  - {fileID: 21300000, guid: 192f707694e630f48becbffd6383cc49, type: 3}
+  Image: {fileID: 21300000, guid: 22506d17adbf1e74a9aff79148d4f421, type: 3}
